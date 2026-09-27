@@ -173,6 +173,29 @@ a,button{-webkit-tap-highlight-color:transparent}
   .subhead{margin-top:24px}
   .subhead h3{font-size:22px}
 }
+
+/* section columns: phone = one column in original order */
+.sec-head,.sec-body{display:contents}
+.sec-head .pills{order:1}
+.sec-head .cta{order:2}
+@media (min-width:960px){
+  .wrap{max-width:1180px}
+  .bar-in{max-width:1180px}
+  section{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);column-gap:64px;align-items:start}
+  .sec-head{display:flex;flex-direction:column;gap:16px;position:sticky;top:96px}
+  .sec-body{display:flex;flex-direction:column;gap:14px;padding-top:6px}
+  .sec-head .pills,.sec-head .cta{order:0}
+  .sec-head .cta{grid-template-columns:1fr;margin-top:6px}
+  .sec-head .lede{max-width:none}
+  .hexlist{grid-template-columns:1fr 1fr}
+  .opts{grid-template-columns:1fr 1fr}
+  .posts{grid-template-columns:1fr}
+  .post{flex-direction:row}
+  .formats{grid-template-columns:1fr 1fr}
+  .rooms{margin-top:4px}
+  #contact .sec-body{padding-top:0}
+  .contact{max-width:none}
+}
 @media (prefers-reduced-motion:no-preference){
   .hero>*{animation:rise .6s ease both}
   .hero>*:nth-child(2){animation-delay:.08s}.hero>*:nth-child(3){animation-delay:.16s}.hero>*:nth-child(4){animation-delay:.24s}
@@ -210,120 +233,152 @@ a,button{-webkit-tap-highlight-color:transparent}
     </div>
   </header>
 
-  <section id="adults" aria-labelledby="h-adults">
-    <div class="kick"><i></i>01 · For adults</div>
-    <h2 id="h-adults">1:1 Performance Coaching</h2>
-    <p class="lede">Private coaching built around you, your goals and the pressure you carry. We look at how your brain and body respond to stress, then build habits that hold up on the hard days.</p>
-    <div class="card">
-      <h3>What we work on</h3>
-      <ul class="hexlist">
-        <li><b>Focus and drive.</b> Understand your dopamine patterns and get motivation working for you.</li>
-        <li><b>Stress and recovery.</b> Spot the early signs of overload and reset before burnout.</li>
-        <li><b>Confidence under pressure.</b> Stay composed when the stakes are high.</li>
-        <li><b>Sleep, energy and routine.</b> Simple, sustainable changes that stick.</li>
-      </ul>
+  <section aria-labelledby="h-adults" id="adults">
+    <div class="sec-head">
+      <div class="kick"><i></i>01 · For adults</div>
+      <h2 id="h-adults">1:1 Performance Coaching</h2>
+      <p class="lede">Private coaching built around you, your goals and the pressure you carry. We look at how your brain and body respond to stress, then build habits that hold up on the hard days.</p>
+      <div class="cta">
+<a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=1%3A1%20Coaching%20enquiry"><strong>Email to enquire</strong><span>Reply within 24 hours</span></a>
+<a class="btn" href="https://ig.me/m/ebzao" target="_blank" rel="noopener"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
+</div>
+    </div>
+    <div class="sec-body">
+      <div class="card">
+<h3>What we work on</h3>
+<ul class="hexlist">
+<li><b>Focus and drive.</b> Understand your dopamine patterns and get motivation working for you.</li>
+<li><b>Stress and recovery.</b> Spot the early signs of overload and reset before burnout.</li>
+<li><b>Confidence under pressure.</b> Stay composed when the stakes are high.</li>
+<li><b>Sleep, energy and routine.</b> Simple, sustainable changes that stick.</li>
+</ul>
+<div class="pills">
+<span class="pill hot">1:1</span><span class="pill">Online or in person</span><span class="pill">Athletes, founders, professionals</span>
+</div>
+</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-body" id="body">
+    <div class="sec-head">
+      <div class="kick"><i></i>02 · Body and metabolism</div>
+      <h2 id="h-body">Body Composition and Metabolic Health</h2>
+      <p class="lede">1:1 coaching to change how your body looks, feels and performs. Built on over a decade of strength and conditioning, and joined up with the brain side so the results last.</p>
       <div class="pills">
-        <span class="pill hot">1:1</span><span class="pill">Online or in person</span><span class="pill">Athletes, founders, professionals</span>
-      </div>
+<span class="pill hot">Tailored to you</span><span class="pill">In person in Harrogate or online</span><span class="pill">Regular progress reviews</span>
+</div>
+      <div class="cta">
+<a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=1%3A1%20Coaching%20enquiry"><strong>Email to enquire</strong><span>Reply within 24 hours</span></a>
+<a class="btn" href="https://ig.me/m/ebzao" rel="noopener" target="_blank"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
+</div>
     </div>
-    <div class="subhead" id="body" style="scroll-margin-top:72px"><h3>Body Composition and Metabolic Health</h3></div>
-    <p class="lede">1:1 coaching to change how your body looks, feels and performs. Built on over a decade of strength and conditioning, and joined up with the brain side so the results last.</p>
-    <div class="card">
-      <h3>What it covers</h3>
-      <ul class="hexlist">
-        <li><b>Fat loss that protects muscle.</b> Steady, sustainable progress without crash dieting.</li>
-        <li><b>Strength building.</b> Structured training that gets you measurably stronger.</li>
-        <li><b>Optimal metabolic health.</b> Energy, blood sugar balance, sleep and recovery working together.</li>
-        <li><b>Mindset and habits.</b> Understand the cravings, drive and stress behind your choices.</li>
-      </ul>
-    </div>
-    <div class="opts" aria-label="Tailored options">
-      <div class="opt"><strong>Fat Loss Focus</strong><span>Lower body fat, keep your strength, and build eating and training habits you can live with.</span></div>
-      <div class="opt"><strong>Strength Focus</strong><span>A progressive plan to add strength and muscle, with clear targets and regular check-ins.</span></div>
-      <div class="opt"><strong>Recomposition</strong><span>Lose fat and build strength at the same time, balanced around your lifestyle and goals.</span></div>
-      <div class="opt"><strong>Metabolic Reset</strong><span>Rebuild energy, sleep and routine first, then layer in body composition goals.</span></div>
-    </div>
-    <div class="pills">
-      <span class="pill hot">Tailored to you</span><span class="pill">In person in Harrogate or online</span><span class="pill">Regular progress reviews</span>
-    </div>
-    <div class="cta">
-      <a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=1%3A1%20Coaching%20enquiry"><strong>Email to enquire</strong><span>Reply within 24 hours</span></a>
-      <a class="btn" href="https://ig.me/m/ebzao" target="_blank" rel="noopener"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
+    <div class="sec-body">
+      <div class="card">
+<h3>What it covers</h3>
+<ul class="hexlist">
+<li><b>Fat loss that protects muscle.</b> Steady, sustainable progress without crash dieting.</li>
+<li><b>Strength building.</b> Structured training that gets you measurably stronger.</li>
+<li><b>Optimal metabolic health.</b> Energy, blood sugar balance, sleep and recovery working together.</li>
+<li><b>Mindset and habits.</b> Understand the cravings, drive and stress behind your choices.</li>
+</ul>
+</div>
+      <div aria-label="Tailored options" class="opts">
+<div class="opt"><strong>Fat Loss Focus</strong><span>Lower body fat, keep your strength, and build eating and training habits you can live with.</span></div>
+<div class="opt"><strong>Strength Focus</strong><span>A progressive plan to add strength and muscle, with clear targets and regular check-ins.</span></div>
+<div class="opt"><strong>Recomposition</strong><span>Lose fat and build strength at the same time, balanced around your lifestyle and goals.</span></div>
+<div class="opt"><strong>Metabolic Reset</strong><span>Rebuild energy, sleep and routine first, then layer in body composition goals.</span></div>
+</div>
     </div>
   </section>
 
-  <section id="youth" aria-labelledby="h-youth">
-    <div class="kick"><i></i>02 · For young people</div>
-    <h2 id="h-youth">Youth-Friendly Coaching</h2>
-    <p class="lede">The same science, pitched for young athletes and students. Sessions are practical, relaxed and built to help them understand their own brain.</p>
-    <div class="card">
-      <h3>How it works</h3>
-      <ul class="hexlist">
-        <li><b>Handling nerves.</b> Tools for match day, exams and trials.</li>
-        <li><b>Motivation and bounce-back.</b> Dealing with setbacks, selection and comparison.</li>
-        <li><b>Healthy habits.</b> Sleep, screens and recovery explained in plain language.</li>
-        <li><b>Parents kept in the loop.</b> A clear plan agreed with you at the start.</li>
-      </ul>
-      <div class="pills">
-        <span class="pill hot">Youth-friendly</span><span class="pill">Parent or guardian involved</span><span class="pill">Sport and study</span>
-      </div>
+  <section aria-labelledby="h-youth" id="youth">
+    <div class="sec-head">
+      <div class="kick"><i></i>03 · For young people</div>
+      <h2 id="h-youth">Youth-Friendly Coaching</h2>
+      <p class="lede">The same science, pitched for young athletes and students. Sessions are practical, relaxed and built to help them understand their own brain.</p>
+      <div class="cta">
+<a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=Youth%20coaching%20enquiry"><strong>Email to enquire</strong><span>Parents welcome to get in touch</span></a>
+<a class="btn" href="https://ig.me/m/ebzao" rel="noopener" target="_blank"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
+</div>
     </div>
-    <div class="cta">
-      <a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=Youth%20coaching%20enquiry"><strong>Email to enquire</strong><span>Parents welcome to get in touch</span></a>
-      <a class="btn" href="https://ig.me/m/ebzao" target="_blank" rel="noopener"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
-    </div>
-  </section>
-
-  <section id="speaking" aria-labelledby="h-speaking">
-    <div class="kick"><i></i>03 · For events and teams</div>
-    <h2 id="h-speaking">Workshops, Seminars and Keynotes</h2>
-    <p class="lede">Talks that make brain science useful. Clear, energetic and built for people who want to perform without burning out.</p>
-    <div class="formats">
-      <div class="fmt"><small>Format</small><strong>Keynote</strong><span>45 minutes plus Q&amp;A</span></div>
-      <div class="fmt"><small>Format</small><strong>Away day workshop</strong><span>Half or full day, hands-on</span></div>
-    </div>
-    <div class="card">
-      <h3>Talk: DOSE</h3>
-      <p>The four chemicals behind how we feel and perform, and how to work with each one.</p>
-      <dl class="dose">
-        <dt>D</dt><dd><b>Dopamine.</b> Drive, motivation and reward.</dd>
-        <dt>O</dt><dd><b>Oxytocin.</b> Trust, connection and belonging.</dd>
-        <dt>S</dt><dd><b>Serotonin.</b> Mood, confidence and calm.</dd>
-        <dt>E</dt><dd><b>Endorphins.</b> Resilience, relief and recovery.</dd>
-      </dl>
-    </div>
-    <div class="card">
-      <h3>Talk: Trying hard and dysregulated</h3>
-      <p>Burnout in high performers. Why the people who care most are often most at risk, and what to do before it costs them.</p>
-    </div>
-    <div class="rooms">Recent rooms include the <b>Great Harrogate Leadership and Performance Event</b> with Steve Tappin and Steve McClaren.</div>
-    <div class="cta">
-      <a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=Speaking%20enquiry"><strong>Email to book</strong><span>Share your date and audience</span></a>
-      <a class="btn" href="https://ig.me/m/ebzao" target="_blank" rel="noopener"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
+    <div class="sec-body">
+      <div class="card">
+<h3>How it works</h3>
+<ul class="hexlist">
+<li><b>Handling nerves.</b> Tools for match day, exams and trials.</li>
+<li><b>Motivation and bounce-back.</b> Dealing with setbacks, selection and comparison.</li>
+<li><b>Healthy habits.</b> Sleep, screens and recovery explained in plain language.</li>
+<li><b>Parents kept in the loop.</b> A clear plan agreed with you at the start.</li>
+</ul>
+<div class="pills">
+<span class="pill hot">Youth-friendly</span><span class="pill">Parent or guardian involved</span><span class="pill">Sport and study</span>
+</div>
+</div>
     </div>
   </section>
 
-  <section id="contact" aria-labelledby="h-contact">
-    <div class="kick"><i></i>04 · Get in touch</div>
-    <h2 id="h-contact">Start with a conversation</h2>
-    <p class="lede">Tell me a little about you or your event and I will come back to you within 24 hours.</p>
-    <div class="contact">
-      <code id="email">adam@dopamind-performance.co.uk</code>
-      <button class="copy" id="copyBtn" type="button">Copy</button>
+  <section aria-labelledby="h-speaking" id="speaking">
+    <div class="sec-head">
+      <div class="kick"><i></i>04 · For events and teams</div>
+      <h2 id="h-speaking">Workshops, Seminars and Keynotes</h2>
+      <p class="lede">Talks that make brain science useful. Clear, energetic and built for people who want to perform without burning out.</p>
+      <div class="cta">
+<a class="btn primary" href="mailto:adam@dopamind-performance.co.uk?subject=Speaking%20enquiry"><strong>Email to book</strong><span>Share your date and audience</span></a>
+<a class="btn" href="https://ig.me/m/ebzao" rel="noopener" target="_blank"><strong>DM on Instagram</strong><span>Quick questions welcome</span></a>
+</div>
+    </div>
+    <div class="sec-body">
+      <div class="formats">
+<div class="fmt"><small>Format</small><strong>Keynote</strong><span>45 minutes plus Q&amp;A</span></div>
+<div class="fmt"><small>Format</small><strong>Away day workshop</strong><span>Half or full day, hands-on</span></div>
+</div>
+      <div class="card">
+<h3>Talk: DOSE</h3>
+<p>The four chemicals behind how we feel and perform, and how to work with each one.</p>
+<dl class="dose">
+<dt>D</dt><dd><b>Dopamine.</b> Drive, motivation and reward.</dd>
+<dt>O</dt><dd><b>Oxytocin.</b> Trust, connection and belonging.</dd>
+<dt>S</dt><dd><b>Serotonin.</b> Mood, confidence and calm.</dd>
+<dt>E</dt><dd><b>Endorphins.</b> Resilience, relief and recovery.</dd>
+</dl>
+</div>
+      <div class="card">
+<h3>Talk: Trying hard and dysregulated</h3>
+<p>Burnout in high performers. Why the people who care most are often most at risk, and what to do before it costs them.</p>
+</div>
+      <div class="rooms">Recent rooms include the <b>Great Harrogate Leadership and Performance Event</b> with Steve Tappin and Steve McClaren.</div>
     </div>
   </section>
 
-  <section id="substack" aria-labelledby="h-substack">
-    <div class="kick"><i></i>05 · Read</div>
-    <h2 id="h-substack">Articles on Substack</h2>
-    <p class="lede">Longer reads on the brain, the body and performing well without burning out.</p>
-    <div class="posts">
-      <a class="post" href="https://substack.com" target="_blank" rel="noopener"><span class="num">01</span><div><small>Brain and performance</small><strong>Working with your dopamine, not against it</strong><span>Drive, focus and why motivation dips.</span></div></a>
-      <a class="post" href="https://substack.com" target="_blank" rel="noopener"><span class="num">02</span><div><small>Body and metabolism</small><strong>Fat loss, strength and metabolic health</strong><span>What actually moves body composition.</span></div></a>
-      <a class="post" href="https://substack.com" target="_blank" rel="noopener"><span class="num">03</span><div><small>Stress and recovery</small><strong>Trying hard and dysregulated</strong><span>Burnout in people who care the most.</span></div></a>
+  <section aria-labelledby="h-contact" id="contact">
+    <div class="sec-head">
+      <div class="kick"><i></i>05 · Get in touch</div>
+      <h2 id="h-contact">Start with a conversation</h2>
+      <p class="lede">Tell me a little about you or your event and I will come back to you within 24 hours.</p>
     </div>
-    <div class="cta">
-      <a class="btn primary wide" href="https://substack.com" target="_blank" rel="noopener"><strong>Subscribe on Substack</strong><span>New articles straight to your inbox</span></a>
+    <div class="sec-body">
+      <div class="contact">
+<code id="email">adam@dopamind-performance.co.uk</code>
+<button class="copy" id="copyBtn" type="button">Copy</button>
+</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-substack" id="substack">
+    <div class="sec-head">
+      <div class="kick"><i></i>06 · Read</div>
+      <h2 id="h-substack">Articles on Substack</h2>
+      <p class="lede">Longer reads on the brain, the body and performing well without burning out.</p>
+      <div class="cta">
+<a class="btn primary wide" href="https://substack.com" rel="noopener" target="_blank"><strong>Subscribe on Substack</strong><span>New articles straight to your inbox</span></a>
+</div>
+    </div>
+    <div class="sec-body">
+      <div class="posts">
+<a class="post" href="https://substack.com" rel="noopener" target="_blank"><span class="num">01</span><div><small>Brain and performance</small><strong>Working with your dopamine, not against it</strong><span>Drive, focus and why motivation dips.</span></div></a>
+<a class="post" href="https://substack.com" rel="noopener" target="_blank"><span class="num">02</span><div><small>Body and metabolism</small><strong>Fat loss, strength and metabolic health</strong><span>What actually moves body composition.</span></div></a>
+<a class="post" href="https://substack.com" rel="noopener" target="_blank"><span class="num">03</span><div><small>Stress and recovery</small><strong>Trying hard and dysregulated</strong><span>Burnout in people who care the most.</span></div></a>
+</div>
     </div>
   </section>
 
